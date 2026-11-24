@@ -311,7 +311,7 @@ const destinationDetails = {
   bali: {
     name: "Bali",
     location: "Indonesia",
-    image: "./PHOTOS/bali.jpg",
+    image: "../PHOTOS/bali.jpg",
     description:
       "Discover Bali, an island paradise known for its tropical beaches, beautiful temples, lush rice terraces, and unforgettable cultural experiences.",
     bestSeason: "April - October",
@@ -328,7 +328,7 @@ const destinationDetails = {
   maldives: {
     name: "Maldives",
     location: "Maldives",
-    image: "./PHOTOS/maldives.jpg",
+    image: "../PHOTOS/maldives.jpg",
     description:
       "Experience crystal-clear waters, white sandy beaches, luxury island resorts, and peaceful tropical surroundings in the Maldives.",
     bestSeason: "November - April",
@@ -340,7 +340,7 @@ const destinationDetails = {
   paris: {
     name: "Paris",
     location: "France",
-    image: "./PHOTOS/paris.jpg",
+    image: "../PHOTOS/paris.jpg",
     description:
       "Explore the romantic streets of Paris, admire iconic architecture, visit world-famous museums, and enjoy the city's art, culture, and cuisine.",
     bestSeason: "April - June",
@@ -357,7 +357,7 @@ const destinationDetails = {
   switzerland: {
     name: "Switzerland",
     location: "Switzerland",
-    image: "./PHOTOS/switzerland.jpg",
+    image: "../PHOTOS/switzerland.jpg",
     description:
       "Discover breathtaking Alpine landscapes, peaceful lakes, charming villages, and unforgettable mountain adventures in Switzerland.",
     bestSeason: "June - September",
@@ -369,7 +369,7 @@ const destinationDetails = {
   dubai: {
     name: "Dubai",
     location: "United Arab Emirates",
-    image: "./PHOTOS/dubai.jpg",
+    image: "../PHOTOS/dubai.jpg",
     description:
       "Experience Dubai's impressive skyline, modern architecture, luxury shopping, desert adventures, and vibrant city life.",
     bestSeason: "November - March",
@@ -386,7 +386,7 @@ const destinationDetails = {
   santorini: {
     name: "Santorini",
     location: "Greece",
-    image: "./PHOTOS/santorini.jpg",
+    image: "../PHOTOS/santorini.jpg",
     description:
       "Enjoy the iconic whitewashed villages, blue-domed churches, beautiful sunsets, and stunning views of the Aegean Sea.",
     bestSeason: "May - October",
