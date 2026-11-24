@@ -1,0 +1,1383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the world with VOYAGE. Discover amazing destinations, unique travel experiences, and personalized trips."
+    />
+    <meta name="theme-color" content="#123D43" />
+    <title>VOYAGE | Discover the World</title>
+    <link rel="stylesheet" href="/CSS/normalize.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+      <div class="container header-container">
+        <!--logo-->
+        <a href="#home" class="logo" aria-label="VOYAGE Home">
+          <i class="fa-regular fa-compass logo-icon" aria-hidden="true"></i>
+          <span class="logo-text">VOYAGE</span>
+        </a>
+
+        <!-- Navigation -->
+        <nav
+          class="main-navigation"
+          id="main-navigation"
+          aria-label="Main navigation"
+        >
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active" aria-current="page">
+                Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#destinations" class="nav-link"> Destinations </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#experiences" class="nav-link">Experiences</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#about" class="nav-link"> About Us </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#contact" class="nav-link"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+
+        <div class="header-actions">
+          <!-- Plan Your Trip Button -->
+          <button type="button" class="plan-trip-btn">Plan Your Trip</button>
+
+          <!-- Search Button -->
+          <button type="button" class="search-btn" aria-label="Open search">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            type="button"
+            class="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- ===================== HERO SECTION ===================== -->
+      <section class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+          <!-- Hero Content -->
+          <div class="hero-content">
+            <span class="hero-subtitle"> DISCOVER THE WORLD </span>
+            <h1 class="hero-title hero-animate">
+              Explore The World,
+              <span>One Journey At A Time.</span>
+            </h1>
+            <p class="hero-description hero-animate">
+              Discover breathtaking destinations, unforgettable experiences, and
+              journeys designed around you.
+            </p>
+
+            <!-- Hero Actions -->
+            <div class="hero-actions hero-animate">
+              <a href="#destinations" class="hero-primary-btn">
+                Explore Destinations
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+
+              <button type="button" class="hero-secondary-btn">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                Plan Your Trip
+              </button>
+            </div>
+          </div>
+          <!-- Hero Bottom Information -->
+          <div class="hero-bottom-info hero-animate">
+            <div class="hero-location">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>Find Your Next Destination</span>
+            </div>
+
+            <div class="hero-scroll">
+              <span>SCROLL TO EXPLORE</span>
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TRAVEL SEARCH SECTION ===================== -->
+      <section class="travel-search-section" id="travel-search">
+        <div class="container">
+          <form class="travel-search-form" id="travel-search-form">
+            <!-- Destination -->
+            <div class="search-field">
+              <label for="search-destination">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Destination
+              </label>
+
+              <input
+                type="text"
+                id="search-destination"
+                name="destination"
+                placeholder="Where do you want to go?"
+                list="destination-suggestions"
+                autocomplete="off"
+                required
+              />
+
+              <datalist id="destination-suggestions">
+                <option value="Bali"></option>
+                <option value="Maldives"></option>
+                <option value="Paris"></option>
+                <option value="Switzerland"></option>
+                <option value="Dubai"></option>
+                <option value="Santorini"></option>
+              </datalist>
+            </div>
+
+            <!-- Departure Date -->
+            <div class="search-field">
+              <label for="departure-date">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                Departure
+              </label>
+
+              <input
+                type="date"
+                id="departure-date"
+                name="departure"
+                required
+              />
+            </div>
+
+            <!-- Return Date -->
+            <div class="search-field">
+              <label for="return-date">
+                <i class="fa-regular fa-calendar-check"></i>
+                Return
+              </label>
+
+              <input type="date" id="return-date" name="return" required />
+            </div>
+
+            <!-- Travelers -->
+            <div class="search-field">
+              <label for="travelers-count">
+                <i class="fa-solid fa-users"></i>
+                Travelers
+              </label>
+
+              <input
+                type="number"
+                id="travelers-count"
+                name="travelers"
+                min="1"
+                max="20"
+                value="2"
+                required
+              />
+            </div>
+
+            <!-- Trip Type -->
+            <div class="search-field">
+              <label for="trip-type">
+                <i class="fa-solid fa-compass"></i>
+                Trip Type
+              </label>
+
+              <select name="trip-type" id="trip-type" required>
+                <option value="" disabled selected>Select trip type</option>
+
+                <option value="adventure">Adventure</option>
+
+                <option value="beach">Beach & Relaxation</option>
+
+                <option value="cultural">Cultural Tours</option>
+
+                <option value="nature">Nature & Wildlife</option>
+              </select>
+            </div>
+
+            <!-- Search Button -->
+            <button type="submit" class="travel-search-btn">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+
+              Search Trips
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===================== POPULAR DESTINATIONS SECTION ===================== -->
+      <section class="popular-destinations-section" id="destinations">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="section-heading">
+            <div class="section-heading-content">
+              <span class="section-subtitle"> EXPLORE THE WORLD </span>
+
+              <h2 class="section-title">Popular Destinations</h2>
+
+              <p class="section-description">
+                Discover some of the world's most beautiful destinations and
+                find your next unforgettable journey.
+              </p>
+            </div>
+
+            <a href="#featured-trips" class="section-view-all">
+              View All Trips
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Destination Filters -->
+          <div
+            class="destination-filters"
+            role="group"
+            aria-label="Destination filters"
+          >
+            <button
+              type="button"
+              class="destination-filter active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All Destinations
+            </button>
+
+            <button
+              type="button"
+              class="destination-filter"
+              data-filter="adventure"
+              aria-pressed="false"
+            >
+              Adventure
+            </button>
+
+            <button
+              type="button"
+              class="destination-filter"
+              data-filter="beach"
+              aria-pressed="false"
+            >
+              Beach
+            </button>
+
+            <button
+              type="button"
+              class="destination-filter"
+              data-filter="cultural"
+              aria-pressed="false"
+            >
+              Cultural
+            </button>
+
+            <button
+              type="button"
+              class="destination-filter"
+              data-filter="nature"
+              aria-pressed="false"
+            >
+              Nature
+            </button>
+          </div>
+
+          <!-- Destination Cards -->
+          <div class="destinations-grid">
+            <!-- Destination 1: Bali -->
+            <article
+              class="destination-card"
+              data-category="adventure"
+              data-destination="bali"
+            >
+              <div class="destination-image-wrapper">
+                <img
+                  src="/PHOTOS/bali.jpg"
+                  alt="Beautiful tropical landscape in Bali"
+                  class="destination-image"
+                  loading="lazy"
+                />
+                <span class="destination-category"> Adventure </span>
+              </div>
+
+              <div class="destination-card-content">
+                <div class="destination-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Indonesia
+                </div>
+
+                <h3 class="destination-name">Bali</h3>
+                <p class="destination-description">
+                  Explore tropical landscapes, beautiful beaches, and
+                  unforgettable island experiences.
+                </p>
+
+                <div class="destination-card-footer">
+                  <div class="destination-price">
+                    <span>Starting from</span>
+                    <strong>$899</strong>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="destination-details-btn"
+                    data-destination="bali"
+                    aria-label="View Bali details"
+                  >
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Destination 2: Maldives -->
+            <article
+              class="destination-card"
+              data-category="beach"
+              data-destination="maldives"
+            >
+              <div class="destination-image-wrapper">
+                <img
+                  src="/PHOTOS/maldives.jpg"
+                  alt="Turquoise water and tropical islands in Maldives"
+                  class="destination-image"
+                  loading="lazy"
+                />
+                <span class="destination-category"> Beach </span>
+              </div>
+
+              <div class="destination-card-content">
+                <div class="destination-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Maldives
+                </div>
+
+                <h3 class="destination-name">Maldives</h3>
+
+                <p class="destination-description">
+                  Relax on white sandy beaches and discover crystal-clear
+                  turquoise waters.
+                </p>
+
+                <div class="destination-card-footer">
+                  <div class="destination-price">
+                    <span>Starting from</span>
+                    <strong>$1,299</strong>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="destination-details-btn"
+                    data-destination="maldives"
+                    aria-label="View Maldives details"
+                  >
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Destination 3: Paris -->
+            <article
+              class="destination-card"
+              data-category="cultural"
+              data-destination="paris"
+            >
+              <div class="destination-image-wrapper">
+                <img
+                  src="/PHOTOS/paris.jpg"
+                  alt="Eiffel Tower and Paris cityscape"
+                  class="destination-image"
+                  loading="lazy"
+                />
+                <span class="destination-category"> Culture </span>
+              </div>
+
+              <div class="destination-card-content">
+                <div class="destination-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  France
+                </div>
+
+                <h3 class="destination-name">Paris</h3>
+
+                <p class="destination-description">
+                  Experience iconic landmarks, charming streets, art, history,
+                  and French culture.
+                </p>
+
+                <div class="destination-card-footer">
+                  <div class="destination-price">
+                    <span>Starting from</span>
+                    <strong>$1,099</strong>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="destination-details-btn"
+                    data-destination="paris"
+                    aria-label="View Paris details"
+                  >
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Destination 4: Switzerland -->
+            <article
+              class="destination-card"
+              data-category="nature"
+              data-destination="switzerland"
+            >
+              <div class="destination-image-wrapper">
+                <img
+                  src="/PHOTOS/switzerland.jpg"
+                  alt="Swiss Alps with mountains and a peaceful lake"
+                  class="destination-image"
+                  loading="lazy"
+                />
+                <span class="destination-category"> Nature </span>
+              </div>
+
+              <div class="destination-card-content">
+                <div class="destination-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Switzerland
+                </div>
+
+                <h3 class="destination-name">Switzerland</h3>
+                <p class="destination-description">
+                  Discover breathtaking Alpine mountains, peaceful lakes, and
+                  scenic villages.
+                </p>
+
+                <div class="destination-card-footer">
+                  <div class="destination-price">
+                    <span>Starting from</span>
+                    <strong>$1,499</strong>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="destination-details-btn"
+                    data-destination="switzerland"
+                    aria-label="View Switzerland details"
+                  >
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Destination 5: Dubai -->
+            <article
+              class="destination-card"
+              data-category="adventure"
+              data-destination="dubai"
+            >
+              <div class="destination-image-wrapper">
+                <img
+                  src="/PHOTOS/dubai.jpg"
+                  alt="Dubai skyline with Khalifa tower"
+                  class="destination-image"
+                  loading="lazy"
+                />
+                <span class="destination-category"> Adventure </span>
+              </div>
+
+              <div class="destination-card-content">
+                <div class="destination-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  United Arab Emirates
+                </div>
+
+                <h3 class="destination-name">Dubai</h3>
+                <p class="destination-description">
+                  Enjoy modern architecture, desert adventures, and exciting
+                  city experiences.
+                </p>
+
+                <div class="destination-card-footer">
+                  <div class="destination-price">
+                    <span>Starting from</span>
+                    <strong>$999</strong>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="destination-details-btn"
+                    data-destination="dubai"
+                    aria-label="View Dubai details"
+                  >
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Destination 6: Santorini -->
+            <article
+              class="destination-card"
+              data-category="beach"
+              data-destination="santorini"
+            >
+              <div class="destination-image-wrapper">
+                <img
+                  src="/PHOTOS/santorini.jpg"
+                  alt="White buildings overlooking the sea in Santorini"
+                  class="destination-image"
+                  loading="lazy"
+                />
+                <span class="destination-category"> Beach </span>
+              </div>
+
+              <div class="destination-card-content">
+                <div class="destination-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Greece
+                </div>
+
+                <h3 class="destination-name">Santorini</h3>
+
+                <p class="destination-description">
+                  Enjoy stunning sea views, whitewashed villages, and beautiful
+                  Mediterranean sunsets.
+                </p>
+
+                <div class="destination-card-footer">
+                  <div class="destination-price">
+                    <span>Starting from</span>
+                    <strong>$1,199</strong>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="destination-details-btn"
+                    data-destination="santorini"
+                    aria-label="View Santorini details"
+                  >
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Destination Details Modal -->
+      <div class="destination-modal" id="destination-modal" aria-hidden="true">
+        <div class="destination-modal-overlay"></div>
+
+        <div
+          class="destination-modal-content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-destination-name"
+        >
+          <button
+            type="button"
+            class="destination-modal-close"
+            aria-label="Close destination details"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+
+          <div class="destination-modal-image-wrapper">
+            <img src="" alt="" class="destination-modal-image" />
+          </div>
+
+          <div class="destination-modal-body">
+            <span class="destination-modal-location"></span>
+            <h2
+              class="destination-modal-title"
+              id="modal-destination-name"
+            ></h2>
+
+            <p class="destination-modal-description"></p>
+
+            <div class="destination-modal-info">
+              <div class="modal-info-item">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+
+                <div>
+                  <span>Best Time to Visit</span>
+                  <strong class="modal-best-season"></strong>
+                </div>
+              </div>
+
+              <div class="modal-info-item">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                <div>
+                  <span>Recommended Duration</span>
+                  <strong class="modal-duration"></strong>
+                </div>
+              </div>
+
+              <div class="modal-info-item">
+                <i class="fa-solid fa-tag" aria-hidden="true"></i>
+                <div>
+                  <span>Starting Price</span>
+                  <strong class="modal-price"></strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="destination-modal-attractions">
+              <h3>Top Attractions</h3>
+              <ul class="modal-attractions-list"></ul>
+            </div>
+
+            <button type="button" class="modal-plan-trip-btn">
+              Plan a Trip
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Travel Planner Modal -->
+      <div
+        class="travel-planner-modal"
+        id="travel-planner-modal"
+        aria-hidden="true"
+      >
+        <div class="travel-planner-overlay"></div>
+
+        <div
+          class="travel-planner-content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="travel-planner-title"
+        >
+          <button
+            type="button"
+            class="travel-planner-close"
+            aria-label="Close travel planner"
+          >
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+
+          <div class="travel-planner-header">
+            <span class="section-subtitle">PLAN YOUR JOURNEY</span>
+            <h2 id="travel-planner-title">Create Your Perfect Trip</h2>
+            <p>Tell us about your travel plans and preferences.</p>
+          </div>
+
+          <form class="travel-planner-form" id="travel-planner-form">
+            <div class="planner-form-grid">
+              <div class="planner-field">
+                <label for="planner-destination">Destination</label>
+                <select name="destination" id="planner-destination" required>
+                  <option value="" disabled selected>Select destination</option>
+                  <option value="bali">Bali</option>
+                  <option value="maldives">Maldives</option>
+                  <option value="paris">Paris</option>
+                  <option value="switzerland">Switzerland</option>
+                  <option value="dubai">Dubai</option>
+                  <option value="santorini">Santorini</option>
+                </select>
+              </div>
+
+              <div class="planner-field">
+                <label for="planner-trip-type">Trip Type</label>
+                <select name="trip-type" id="planner-trip-type" required>
+                  <option value="" disabled selected>Select trip type</option>
+                  <option value="adventure">Adventure</option>
+                  <option value="beach">Beach & Relaxation</option>
+                  <option value="cultural">Cultural Tours</option>
+                  <option value="nature">Nature & Wildlife</option>
+                </select>
+              </div>
+
+              <div class="planner-field">
+                <label for="planner-departure">Departure Date</label>
+                <input
+                  type="date"
+                  id="planner-departure"
+                  name="departure"
+                  required
+                />
+              </div>
+
+              <div class="planner-field">
+                <label for="planner-return">Return Date</label>
+                <input type="date" name="return" id="planner-return" required />
+              </div>
+
+              <div class="planner-field">
+                <label for="planner-adults">Adults</label>
+                <input
+                  type="number"
+                  name="adults"
+                  id="planner-adults"
+                  min="1"
+                  max="20"
+                  value="1"
+                />
+              </div>
+
+              <div class="planner-field">
+                <label for="planner-children">Children</label>
+                <input
+                  type="number"
+                  name="children"
+                  id="planner-children"
+                  min="0"
+                  max="20"
+                  value="0"
+                />
+              </div>
+
+              <div class="planner-field planner-field-full">
+                <label for="planner-budget">Approximate Budget (USD)</label>
+                <select name="budget" id="planner-budget" required>
+                  <option value="" disabled selected>Select your budget</option>
+                  <option value="Under $1,000">Under $1,000</option>
+                  <option value="$1,000 - $2,500">$1,000 - $2,500</option>
+                  <option value="$2,500 - $5,000">$2,500 - $5,000</option>
+                  <option value="Over $5,000">Over $5,000</option>
+                </select>
+              </div>
+
+              <div class="planner-field planner-field-full">
+                <label for="planner-notes">Additional Notes</label>
+                <textarea
+                  name="notes"
+                  id="planner-notes"
+                  rows="4"
+                  placeholder="Tell us about your preferences or special requests..."
+                ></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="planner-submit-btn">
+              Submit Travel Request
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+
+            <div
+              class="planner-form-message"
+              id="planner-form-message"
+              role="status"
+              aria-live="polite"
+            ></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ===================== TRAVEL EXPERIENCES SECTION ===================== -->
+      <section class="travel-experiences-section" id="experiences">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="section-heading">
+            <div class="section-heading-content">
+              <span class="section-subtitle"> FIND YOUR EXPERIENCE </span>
+
+              <h2 class="section-title">Travel Your Way</h2>
+
+              <p class="section-description">
+                Discover the kind of journey that inspires you. From thrilling
+                adventures to peaceful escapes, find experiences that match your
+                travel style.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experiences Grid -->
+          <div class="experiences-grid">
+            <!-- Adventure -->
+            <a
+              href="#destinations"
+              class="experience-card experience-adventure"
+            >
+              <div class="experience-card-content">
+                <span class="experience-number">01</span>
+
+                <h3 class="experience-title">Adventure</h3>
+
+                <p class="experience-description">
+                  Push your limits and discover extraordinary places through
+                  unforgettable adventures.
+                </p>
+
+                <span class="experience-link">
+                  Explore Experiences
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </span>
+              </div>
+            </a>
+
+            <!-- Beach & Relaxation -->
+            <a href="#destinations" class="experience-card experience-beach">
+              <div class="experience-card-content">
+                <span class="experience-number">02</span>
+
+                <h3 class="experience-title">Beach & Relaxation</h3>
+
+                <p class="experience-description">
+                  Escape to peaceful coastlines, crystal-clear waters and
+                  moments of pure relaxation.
+                </p>
+
+                <span class="experience-link">
+                  Explore Experiences
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </span>
+              </div>
+            </a>
+
+            <!-- Cultural Experiences -->
+            <a href="#destinations" class="experience-card experience-cultural">
+              <div class="experience-card-content">
+                <span class="experience-number">03</span>
+
+                <h3 class="experience-title">Cultural Experiences</h3>
+
+                <p class="experience-description">
+                  Explore historic cities, local traditions, art and authentic
+                  cultural experiences.
+                </p>
+
+                <span class="experience-link">
+                  Explore Experiences
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </span>
+              </div>
+            </a>
+
+            <!-- Nature & Wildlife -->
+            <a href="#destinations" class="experience-card experience-nature">
+              <div class="experience-card-content">
+                <span class="experience-number">04</span>
+
+                <h3 class="experience-title">Nature & Wildlife</h3>
+
+                <p class="experience-description">
+                  Immerse yourself in breathtaking landscapes and reconnect with
+                  the beauty of nature.
+                </p>
+
+                <span class="experience-link">
+                  Explore Experiences
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FEATURED TRIPS SECTION ===================== -->
+      <section class="featured-trips-section" id="featured-trips">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="section-heading">
+            <div class="section-heading-content">
+              <span class="section-subtitle"> HANDPICKED JOURNEYS </span>
+
+              <h2 class="section-title">Featured Trips</h2>
+
+              <p class="section-description">
+                Explore our carefully selected journeys and discover
+                unforgettable experiences around the world.
+              </p>
+            </div>
+          </div>
+
+          <!-- Featured Trips Grid -->
+          <div class="featured-trips-grid">
+            <!-- Bali Trip -->
+            <article class="featured-trip-card">
+              <div class="featured-trip-image featured-trip-bali">
+                <span class="featured-trip-badge"> BEST SELLER </span>
+              </div>
+
+              <div class="featured-trip-content">
+                <span class="featured-trip-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Bali, Indonesia
+                </span>
+
+                <h3 class="featured-trip-title">Bali Escape</h3>
+
+                <p class="featured-trip-description">
+                  Discover tropical beaches, beautiful temples and the peaceful
+                  atmosphere of Bali.
+                </p>
+
+                <div class="featured-trip-meta">
+                  <span>
+                    <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                    7 Days
+                  </span>
+
+                  <span>
+                    <i class="fa-solid fa-users" aria-hidden="true"></i>
+                    2–4 People
+                  </span>
+                </div>
+
+                <div class="featured-trip-footer">
+                  <div class="featured-trip-price">
+                    <span>Starting from</span>
+                    <strong>$1,250</strong>
+                  </div>
+
+                  <a href="#destinations" class="featured-trip-link">
+                    Explore Trip
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Maldives Trip -->
+            <article class="featured-trip-card">
+              <div class="featured-trip-image featured-trip-maldives">
+                <span class="featured-trip-badge"> LUXURY ESCAPE </span>
+              </div>
+
+              <div class="featured-trip-content">
+                <span class="featured-trip-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Maldives
+                </span>
+
+                <h3 class="featured-trip-title">Maldives Retreat</h3>
+
+                <p class="featured-trip-description">
+                  Enjoy crystal-clear waters, stunning island views and a
+                  relaxing tropical getaway.
+                </p>
+
+                <div class="featured-trip-meta">
+                  <span>
+                    <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                    5 Days
+                  </span>
+
+                  <span>
+                    <i class="fa-solid fa-users" aria-hidden="true"></i>
+                    2 People
+                  </span>
+                </div>
+
+                <div class="featured-trip-footer">
+                  <div class="featured-trip-price">
+                    <span>Starting from</span>
+                    <strong>$1,850</strong>
+                  </div>
+
+                  <a href="#destinations" class="featured-trip-link">
+                    Explore Trip
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Switzerland Trip -->
+            <article class="featured-trip-card">
+              <div class="featured-trip-image featured-trip-switzerland">
+                <span class="featured-trip-badge"> ADVENTURE </span>
+              </div>
+
+              <div class="featured-trip-content">
+                <span class="featured-trip-location">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Swiss Alps, Switzerland
+                </span>
+
+                <h3 class="featured-trip-title">Swiss Alps Adventure</h3>
+
+                <p class="featured-trip-description">
+                  Explore breathtaking mountain landscapes, charming villages
+                  and alpine adventures.
+                </p>
+
+                <div class="featured-trip-meta">
+                  <span>
+                    <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                    8 Days
+                  </span>
+                  <span>
+                    <i class="fa-solid fa-users" aria-hidden="true"></i>
+                    2-6 People
+                  </span>
+                </div>
+
+                <div class="featured-trip-footer">
+                  <div class="featured-trip-price">
+                    <span>Starting from</span>
+                    <strong>$1,650</strong>
+                  </div>
+
+                  <a href="#destinations" class="featured-trip-link">
+                    Explore Trip
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== WHY CHOOSE US SECTION ===================== -->
+      <section class="why-choose-us-section" id="about">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="section-heading">
+            <div class="section-heading-content">
+              <span class="section-subtitle"> WHY TRAVEL WITH US </span>
+
+              <h2 class="section-title">Why Choose VOYAGE?</h2>
+
+              <p class="section-description">
+                We make every journey easier, more personal and more memorable
+                with thoughtful planning and dedicated travel support.
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefits Grid -->
+          <div class="benefits-grid">
+            <!-- Benefit 1 -->
+            <article class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              </div>
+
+              <h3 class="benefit-title">Trusted Travel Experts</h3>
+
+              <p class="benefit-description">
+                Get guidance from experienced travel professionals who help make
+                your journey smooth and enjoyable.
+              </p>
+            </article>
+
+            <!-- Benefit 2 -->
+            <article class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-wallet" aria-hidden="true"></i>
+              </div>
+
+              <h3 class="benefit-title">Best Price Guarantee</h3>
+
+              <p class="benefit-description">
+                Discover carefully selected travel options with transparent and
+                competitive pricing.
+              </p>
+            </article>
+
+            <!-- Benefit 3 -->
+            <article class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+              </div>
+
+              <h3 class="benefit-title">Personalized Trips</h3>
+
+              <p class="benefit-description">
+                Find journeys that match your interests, travel style and
+                personal preferences.
+              </p>
+            </article>
+
+            <!-- Benefit 4 -->
+            <article class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
+              </div>
+
+              <h3 class="benefit-title">24/7 Support</h3>
+
+              <p class="benefit-description">
+                Get helpful assistance and guidance throughout every stage of
+                your journey.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 09. NEWSLETTER SECTION ===================== -->
+      <section class="newsletter-section" id="newsletter">
+        <div class="container">
+          <div class="newsletter-content">
+            <span class="newsletter-subtitle"> STAY INSPIRED </span>
+
+            <h2 class="newsletter-title">
+              Get Travel Inspiration
+              <span>Delivered to Your Inbox</span>
+            </h2>
+
+            <p class="newsletter-description">
+              Subscribe to our newsletter and receive the latest travel stories,
+              exclusive offers, and destination inspiration.
+            </p>
+
+            <form class="newsletter-form" id="newsletter-form">
+              <div class="newsletter-input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  placeholder="Enter your email address"
+                  name="email"
+                  aria-label="Email address"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="newsletter-submit-btn">
+                Subscribe
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+            <p
+              class="newsletter-message"
+              id="newsletter-message"
+              aria-live="polite"
+            ></p>
+
+            <span class="newsletter-note"> No spam. Unsubscribe anytime. </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 10. FAQ SECTION ===================== -->
+      <section class="faq-section" id="faq">
+        <div class="container">
+          <div class="faq-header">
+            <span class="faq-subtitle">GOT QUESTIONS?</span>
+
+            <h2 class="faq-title">
+              Frequently Asked
+              <span>Questions</span>
+            </h2>
+
+            <p class="faq-description">
+              Find answers to common questions about planning your next
+              adventure with VOYAGE.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <!-- FAQ ITEM 1 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>How do I book a trip with VOYAGE?</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  You can explore our featured trips or choose a destination and
+                  use the Plan Your Trip form to submit your travel preferences.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ ITEM 2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>Can I customize my travel itinerary?</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  Yes! You can use our travel planner to select your preferred
+                  destination, trip type, dates, group size, and budget.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ ITEM 3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>Are flights included in the trip packages?</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  Package details vary by trip. Please review each featured
+                  trip's description to understand what is included.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ ITEM 4 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>What payment methods do you accept?</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  VOYAGE is currently a travel website demo. No real payments
+                  are processed through this website.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ ITEM 5 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>Can I cancel or modify my booking?</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  You can submit your travel preferences through our planner,
+                  but this demo does not process real bookings or booking
+                  changes.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ ITEM 6 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span>Do you offer travel insurance?</span>
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="faq-answer">
+                <p>
+                  Travel insurance is not currently provided through this demo
+                  website.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER SECTION ===================== -->
+    <footer class="footer-section" id="contact">
+      <div class="container">
+        <div class="footer-main">
+          <!-- BRAND -->
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo"> VOYAGE<span>.</span> </a>
+
+            <p class="footer-description">
+              Discover the world with VOYAGE. We help you create unforgettable
+              travel experiences and explore extraordinary destinations.
+            </p>
+
+            <div class="footer-socials">
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- QUICK LINKS -->
+          <div class="footer-column">
+            <h3 class="footer-heading">Quick Links</h3>
+
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#experiences">Experiences</a></li>
+              <li><a href="#destinations">Destinations</a></li>
+              <li><a href="#newsletter">Newsletter</a></li>
+            </ul>
+          </div>
+
+          <!-- POPULAR DESTINATIONS -->
+          <div class="footer-column">
+            <h3 class="footer-heading">Destinations</h3>
+
+            <ul class="footer-links">
+              <li><a href="#destinations">Bali</a></li>
+              <li><a href="#destinations">Maldives</a></li>
+              <li><a href="#destinations">Paris</a></li>
+              <li><a href="#destinations">Switzerland</a></li>
+              <li><a href="#destinations">Dubai</a></li>
+            </ul>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="footer-column footer-contact">
+            <h3 class="footer-heading">Contact Us</h3>
+
+            <ul class="footer-contact-list">
+              <li>
+                <i class="fa-regular fa-envelope"></i>
+                <span>hello@voyage.com</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>123456789</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+          <p class="footer-copyright">© 2026 VOYAGE. All rights reserved.</p>
+
+          <div class="footer-legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="/JS/index.js" defer></script>
+  </body>
+</html>
