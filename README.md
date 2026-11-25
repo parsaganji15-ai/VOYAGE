@@ -26,6 +26,18 @@ Explore the live version of VOYAGE:
 
 [View Live Website](https://parsaganji15-ai.github.io/VOYAGE/)
 
+
+## Website Preview
+
+### Desktop — Hero Section
+![VOYAGE Homepage](./screenshots/hero-desktop.webp)
+
+### Popular Destinations
+![VOYAGE Destinations](./screenshots/destinations-desktop.webp)
+
+### Mobile Preview
+![VOYAGE Mobile](./screenshots/mobile-preview.webp)
+
 ## Technologies Used
 
 - HTML5
