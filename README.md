@@ -19,6 +19,13 @@ The project focuses on modern UI design, responsive layouts, and interactive fro
 - Interactive FAQ accordion
 - Responsive footer
 
+
+## Live Demo
+
+Explore the live version of VOYAGE:
+
+[View Live Website](https://parsaganji15-ai.github.io/VOYAGE/)
+
 ## Technologies Used
 
 - HTML5
